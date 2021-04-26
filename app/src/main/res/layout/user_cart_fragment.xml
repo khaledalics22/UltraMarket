@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".framgnets.user_fragments.UserCartFrag">
+
+    <TextView
+        android:id="@+id/user_wishlist_frag_empty"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="@string/empty_cart"
+        android:textColor="@color/purple2"
+        app:autoSizeTextType="uniform" />
+
+    <LinearLayout
+        android:id="@+id/user_wishlist_frag_login_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/user_wishlist_login_paddding">
+
+        <ImageView
+            android:layout_width="@dimen/user_icon_image_size"
+            android:layout_height="80dp"
+            android:contentDescription="@string/wishlist_icon"
+            android:src="@drawable/ic_cart_purple" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/title_margin"
+            android:gravity="center_horizontal"
+            android:text="@string/your_cart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/title_margin"
+            android:gravity="center_horizontal"
+            android:text="@string/please_login_to_add_items_to_cart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/button_margin"
+            android:background="@color/colorPrimaryDark">
+
+            <Button
+                android:id="@+id/user_wishlist_login_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:text="@string/login"
+                android:textColor="@android:color/white" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/user_cart_layout"
+        layout="@layout/user_cart_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/user_cart_details_layout"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/user_cart_progress_bar"
+        style="@android:style/Widget.Material.ProgressBar.Large"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/user_cart_details_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/user_cart_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/pink1"
+            android:padding="5dp"
+            android:textColor="@android:color/white"
+            app:autoSizeMaxTextSize="18dp"
+            app:autoSizeMinTextSize="14dp"
+            app:autoSizeTextType="uniform"
+            tools:text="Total Price: 123.1242$ \n Items: 5" />
+
+        <TextView
+            android:id="@+id/user_cart_order_cart"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/pink1"
+            android:drawablePadding="5dp"
+            android:padding="10dp"
+            android:text="@string/order_cart"
+            android:textAppearance="@style/titleStyle"
+            app:autoSizeTextType="uniform"
+            app:drawableEndCompat="@drawable/navigate_next_24"
+            tools:ignore="MissingPrefix" />
+    </LinearLayout>
+
+</RelativeLayout>

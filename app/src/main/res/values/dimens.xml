@@ -1,0 +1,41 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="rv_padding">5dp</dimen>
+    <dimen name="title_margin">5dp</dimen>
+    <dimen name="nav_drawer_height">176dp</dimen>
+    <dimen name="icon_margin">10dp</dimen>
+    <dimen name="icon_padding">5dp</dimen>
+    <dimen name="body_padding">5dp</dimen>
+    <dimen name="product_item_image_size">100dp</dimen>
+    <dimen name="product_item_image_padding">5dp</dimen>
+    <dimen name="product_item_image_margin">5dp</dimen>
+    <dimen name="user_product_item_price_padding">5dp</dimen>
+    <dimen name="product_item_name_margin">5dp</dimen>
+    <dimen name="product_item_price_margin">5dp</dimen>
+    <dimen name="user_product_item_margin_top">2dp</dimen>
+    <dimen name="user_wishlist_login_paddding">20dp</dimen>
+    <dimen name="user_icon_image_size">80dp</dimen>
+    <dimen name="button_margin">10dp</dimen>
+    <dimen name="user_offers_item_image_margin">10dp</dimen>
+    <dimen name="user_offers_item_image_height">120dp</dimen>
+    <dimen name="user_offers_item_image_width">100dp</dimen>
+    <dimen name="user_orders_login_paddding">10dp</dimen>
+    <dimen name="user_drawer_icon_image_size">40dp</dimen>
+    <dimen name="nav_view_image_padding">10dp</dimen>
+    <dimen name="title_padding">5dp</dimen>
+    <dimen name="category_rv_height">270dp</dimen>
+    <dimen name="splash_logo_margin">20dp</dimen>
+    <dimen name="left_drawable_menu_padding">5dp</dimen>
+    <dimen name="prifile_img_size">120dp</dimen>
+    <dimen name="profile_title_margin">5dp</dimen>
+    <dimen name="profile_button_margin">10dp</dimen>
+    <dimen name="profile_user_name_size">28sp</dimen>
+    <dimen name="dialog_view_margin">10dp</dimen>
+    <dimen name="map_view_margin">10dp</dimen>
+    <dimen name="my_location_btn_size">40dp</dimen>
+</resources>

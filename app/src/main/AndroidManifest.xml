@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ultramarket">
+    <!-- check network connectivity permissions -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- location permissions -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission. ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logo_ultra_market"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_foreground"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true" />
+        <activity android:name=".ui.userUi.Activities.PaypalActivity"></activity>
+        <activity
+            android:name=".ui.adminLayer.CategoriesDashboardActivity"
+            android:label="Dashboard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.adminLayer.BrandsDashboardActivity"
+            android:label="Dashboard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.adminLayer.DashBoardActivity"
+            android:label="Dashboard"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAoO4FVciat9f_C7QIBKSgQrbsjeZrt3-U" /> <!-- TODO add this -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity android:name=".ui.userUi.Activities.MapActivity" />
+        <activity
+            android:name=".ui.adminLayer.OrdersActivity"
+            android:label="Orders" />
+        <activity
+            android:name=".ui.userUi.Activities.SearchActivity"
+            android:parentActivityName=".ui.userUi.Activities.HomeActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ui.userUi.Activities.NotificationActivity" />
+        <activity
+            android:name=".ui.userUi.Activities.AboutUsActivity"
+            android:parentActivityName=".ui.userUi.Activities.HomeActivity" />
+        <activity
+            android:name=".ui.userUi.Activities.TrackOrderActivity"
+            android:parentActivityName=".ui.userUi.Activities.HomeActivity" />
+        <activity
+            android:name=".ui.userUi.Activities.OrderConfirmActivity"
+            android:parentActivityName=".ui.userUi.Activities.HomeActivity" />
+        <activity android:name=".ui.userUi.Activities.CategoryBrandProductsActivity" />
+        <activity
+            android:name=".ui.userUi.Activities.ProductActivity"
+            android:parentActivityName=".ui.userUi.Activities.HomeActivity" />
+        <activity
+            android:name=".ui.adminLayer.ProductActivity"
+            android:label="Product"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".ui.adminLayer.ProductsManagementActivity"
+            android:label="Products Management" />
+        <activity
+            android:name=".ui.adminLayer.CategoryActivity"
+            android:label="Category"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.adminLayer.CategoriesManagementActivity"
+            android:label="Categories Management" />
+        <activity
+            android:name=".ui.adminLayer.BrandActivity"
+            android:label="Brand"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.adminLayer.BrandsManagementActivity"
+            android:label="Brands Management" />
+        <activity
+            android:name=".ui.adminLayer.WarehouseActivity"
+            android:label="Warehouse"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.userUi.Activities.SignUpActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.userUi.Activities.UserProfile"
+            android:parentActivityName=".ui.userUi.Activities.HomeActivity" />
+        <activity android:name=".ui.userUi.Activities.LocationActivity" />
+        <activity
+            android:name=".ui.adminLayer.CustomersActivity"
+            android:label="Customers" />
+        <activity
+            android:name=".ui.userUi.Activities.HomeActivity"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.SplashActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.adminLayer.AdminHomeActivity"
+            android:label="Home"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".firebase.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <!--
+ Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_notification_small" />
+        <!--
+ Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+    </application>
+
+</manifest>
